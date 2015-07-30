@@ -6,7 +6,7 @@
 
 ;; Packages installation
 (require 'prelude-packages)
-(prelude-require-packages '(cider solarized-theme zoom-window))
+(prelude-require-packages '(cider rubocop solarized-theme zoom-window))
 
 ;; zoom-window
 (require 'zoom-window)
