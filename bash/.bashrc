@@ -21,3 +21,7 @@ alias ed='emacs --daemon'
 alias ek="emacsclient -e '(kill-emacs)'"
 alias esk="emacsclient -e '(save-buffers-kill-emacs)'"
 alias ls='ls -h --color=auto'
+
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
