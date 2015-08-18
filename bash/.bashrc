@@ -28,3 +28,6 @@ alias ls='ls -h --color=auto'
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
+
+# Android Studio
+export PATH=$HOME/Programming/Android/Android-Studio/bin:$PATH
