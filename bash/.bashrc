@@ -16,6 +16,7 @@ if [ -f "$XRESOURCES_PATH" ]; then
 fi
 
 # Aliases
+alias as='nohup studio.sh &> /dev/null &'
 alias ec='emacsclient -nc'
 alias ed='emacs --daemon'
 alias ek="emacsclient -e '(kill-emacs)'"
