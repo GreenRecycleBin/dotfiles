@@ -158,6 +158,9 @@ bar {
 # Synaptics
 exec --no-startup-id configure-trackpad
 
+# Network Manager applet
+exec --no-startup-id nm-applet
+
 # Redshift
 exec --no-startup-id redshift-gtk
 
