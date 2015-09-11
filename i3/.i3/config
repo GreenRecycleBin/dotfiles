@@ -156,11 +156,7 @@ bar {
 }
 
 # Synaptics
-exec --no-startup-id synclient TapButton1=1
-exec --no-startup-id synclient TapButton2=3
-exec --no-startup-id synclient TapButton3=2
-exec --no-startup-id synclient VertTwoFingerScroll=1
-exec --no-startup-id synclient HorizTwoFingerScroll=1
+exec --no-startup-id configure-trackpad
 
 # Redshift
 exec --no-startup-id redshift-gtk
