@@ -1,6 +1,6 @@
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
@@ -27,8 +27,16 @@ alias ffw='nohup firefox -P work &> /dev/null &'
 alias ls='ls -h --color=auto'
 
 # rbenv
-export "PATH=$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+readonly RBENV_PATH="$HOME/.rbenv"
+
+if [ -d "$RBENV_PATH" ]; then
+    export "PATH=$RBENV_PATH/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
 
 # Android Studio
-export "PATH=$HOME/Programming/Android/Android-Studio/bin:$PATH"
+readonly ANDROID_STUDIO_PATH="$HOME/Programming/Android/Android-Studio"
+
+if [ -d "$ANDROID_STUDIO_PATH" ]; then
+    export "PATH=$ANDROID_STUDIO_PATH/bin:$PATH"
+fi
