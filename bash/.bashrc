@@ -8,6 +8,19 @@ fi
 
 # User specific aliases and functions
 
+pathmunge () {
+    case ":${PATH}:" in
+        *:"$1":*)
+        ;;
+        *)
+            if [ "$2" = 'after' ]; then
+                PATH=$PATH:$1
+            else
+                PATH=$1:$PATH
+            fi
+    esac
+}
+
 # Load configurations
 readonly XRESOURCES_PATH="$HOME/.Xresources"
 
@@ -30,7 +43,7 @@ alias ls='ls -h --color=auto'
 readonly RBENV_PATH="$HOME/.rbenv"
 
 if [ -d "$RBENV_PATH" ]; then
-    export "PATH=$RBENV_PATH/bin:$PATH"
+    pathmunge "$RBENV_PATH"
     eval "$(rbenv init -)"
 fi
 
@@ -38,5 +51,5 @@ fi
 readonly ANDROID_STUDIO_PATH="$HOME/Programming/Android/Android-Studio"
 
 if [ -d "$ANDROID_STUDIO_PATH" ]; then
-    export "PATH=$ANDROID_STUDIO_PATH/bin:$PATH"
+    pathmunge "$ANDROID_STUDIO_PATH/bin"
 fi
