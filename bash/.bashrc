@@ -27,8 +27,8 @@ alias ffw='nohup firefox -P work &> /dev/null &'
 alias ls='ls -h --color=auto'
 
 # rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
+export "PATH=$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Android Studio
-export PATH=$HOME/Programming/Android/Android-Studio/bin:$PATH
+export "PATH=$HOME/Programming/Android/Android-Studio/bin:$PATH"
