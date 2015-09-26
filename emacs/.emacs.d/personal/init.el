@@ -6,7 +6,13 @@
 
 ;; Packages installation
 (require 'prelude-packages)
-(prelude-require-packages '(cider rubocop solarized-theme zoom-window))
+
+(prelude-require-packages '(cider exec-path-from-shell rubocop solarized-theme zoom-window))
+
+;; Set correct $PATH
+(require 'exec-path-from-shell)
+
+(exec-path-from-shell-initialize)
 
 ;; zoom-window
 (require 'zoom-window)
