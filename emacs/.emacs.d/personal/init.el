@@ -6,13 +6,22 @@
 
 ;; Packages installation
 (require 'prelude-packages)
-
-(prelude-require-packages '(cider exec-path-from-shell rubocop solarized-theme zoom-window))
+(prelude-require-packages '(cider clj-refactor exec-path-from-shell rubocop solarized-theme zoom-window))
 
 ;; Set correct $PATH
 (require 'exec-path-from-shell)
 
 (exec-path-from-shell-initialize)
+
+;; Clojure configurations
+(require 'clj-refactor)
+
+(defun my-clojure-mode-hook ()
+  (clj-refactor-mode 1)
+  (yas-minor-mode 1)
+  (cljr-add-keybindings-with-prefix "C-c C-m"))
+
+(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
 
 ;; zoom-window
 (require 'zoom-window)
