@@ -6,7 +6,7 @@
 
 ;; Packages installation
 (require 'prelude-packages)
-(prelude-require-packages '(cider clj-refactor exec-path-from-shell rubocop solarized-theme zoom-window))
+(prelude-require-packages '(cider clj-refactor exec-path-from-shell multiple-cursors rubocop solarized-theme zoom-window))
 
 ;; Set correct $PATH
 (require 'exec-path-from-shell)
@@ -23,6 +23,14 @@
   (paredit-mode))
 
 (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
+
+;; multiple-cursors
+(require 'multiple-cursors)
+
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; zoom-window
 (require 'zoom-window)
