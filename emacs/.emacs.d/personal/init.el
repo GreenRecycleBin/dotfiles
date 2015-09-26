@@ -19,7 +19,8 @@
 (defun my-clojure-mode-hook ()
   (clj-refactor-mode 1)
   (yas-minor-mode 1)
-  (cljr-add-keybindings-with-prefix "C-c C-m"))
+  (cljr-add-keybindings-with-prefix "C-c C-m")
+  (paredit-mode))
 
 (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
 
