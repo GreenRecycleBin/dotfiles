@@ -6,6 +6,9 @@ fi
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+# Unlimited history (http://superuser.com/a/479727/92994)
+export HISTSIZE=""
+
 # User specific aliases and functions
 
 pathmunge () {
