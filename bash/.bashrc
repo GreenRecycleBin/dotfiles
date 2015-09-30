@@ -35,6 +35,7 @@ alias ed='emacs --daemon'
 alias ek="emacsclient -e '(kill-emacs)'"
 alias esk="emacsclient -e '(save-buffers-kill-emacs)'"
 alias ew='emacsclient -nw'
+alias ffd='nohup /opt/firefox-developer-edition/firefox -P dev-edition-default &> /dev/null &'
 alias ffp='nohup firefox -P personal &> /dev/null &'
 alias ffw='nohup firefox -P work &> /dev/null &'
 alias ls='ls -h --color=auto'
