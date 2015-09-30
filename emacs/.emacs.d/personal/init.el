@@ -6,7 +6,7 @@
 
 ;; Packages installation
 (require 'prelude-packages)
-(prelude-require-packages '(cider clj-refactor exec-path-from-shell multiple-cursors rubocop solarized-theme yasnippet zoom-window))
+(prelude-require-packages '(cider clj-refactor exec-path-from-shell multiple-cursors rubocop ruby-hash-syntax solarized-theme yasnippet zoom-window))
 
 ;; Set correct $PATH
 (require 'exec-path-from-shell)
@@ -31,6 +31,9 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;; ruby-hash-syntax
+(require 'ruby-hash-syntax)
 
 ;; YASnippet
 (require 'yasnippet)
