@@ -155,6 +155,9 @@ bar {
         status_command i3status
 }
 
+bindsym $mod+b workspace back_and_forth
+bindsym $mod+Shift+b move container to workspace back_and_forth
+
 # Synaptics
 exec --no-startup-id configure-trackpad
 
