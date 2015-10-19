@@ -6,7 +6,18 @@
 
 ;; Packages installation
 (require 'prelude-packages)
-(prelude-require-packages '(cider clj-refactor exec-path-from-shell multiple-cursors rubocop ruby-hash-syntax solarized-theme yasnippet zoom-window))
+
+(defvar packages '(cider
+                   clj-refactor
+                   exec-path-from-shell
+                   multiple-cursors
+                   rubocop
+                   ruby-hash-syntax
+                   solarized-theme
+                   yasnippet
+                   zoom-window))
+
+(prelude-require-packages packages)
 
 ;; Set correct $PATH
 (require 'exec-path-from-shell)
