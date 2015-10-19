@@ -11,6 +11,7 @@
                    clj-refactor
                    exec-path-from-shell
                    multiple-cursors
+                   pacmacs
                    rubocop
                    ruby-hash-syntax
                    solarized-theme
