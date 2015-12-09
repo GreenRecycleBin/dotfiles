@@ -5,6 +5,14 @@
 ;;; Code:
 
 ;; Packages installation
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
+(setq package-pinned-packages '((cider . "melpa-stable")
+                                (clj-refactor . "melpa-stable")))
+
+(package-refresh-contents)
+
 (require 'prelude-packages)
 
 (defvar packages '(cider
