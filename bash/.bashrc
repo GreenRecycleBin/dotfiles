@@ -57,3 +57,9 @@ readonly ANDROID_STUDIO_PATH="$HOME/Programming/Android/Android-Studio"
 if [ -d "$ANDROID_STUDIO_PATH" ]; then
     pathmunge "$ANDROID_STUDIO_PATH/bin"
 fi
+
+# Homebrew
+export PATH="/usr/local/bin:$PATH"
+
+# Homebrew - coreutils
+pathmunge /usr/local/opt/coreutils/libexec/gnubin
