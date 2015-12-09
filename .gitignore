@@ -1,2 +1,4 @@
 /emacs/.config/systemd/user/default.target.wants
+
+/leiningen/.lein/repl-history
 /leiningen/.lein/self-installs
