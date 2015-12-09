@@ -63,3 +63,5 @@ export PATH="/usr/local/bin:$PATH"
 
 # Homebrew - coreutils
 pathmunge /usr/local/opt/coreutils/libexec/gnubin
+
+pathmunge "$HOME/bin"
