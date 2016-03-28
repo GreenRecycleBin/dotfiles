@@ -158,6 +158,9 @@ bar {
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth
 
+# lxpolkit
+exec --no-startup-id lxpolkit
+
 # Synaptics
 exec --no-startup-id configure-trackpad
 
