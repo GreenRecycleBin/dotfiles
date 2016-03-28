@@ -76,3 +76,8 @@ export PATH="/usr/local/bin:$PATH"
 pathmunge /usr/local/opt/coreutils/libexec/gnubin
 
 pathmunge "$HOME/bin"
+
+# IBus
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
