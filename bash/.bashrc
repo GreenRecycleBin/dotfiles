@@ -81,3 +81,10 @@ pathmunge "$HOME/bin"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+
+# nvm
+readonly NVM_DIR="/home/greenrecyclebin/.nvm"
+
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+    . "$NVM_DIR/nvm.sh"
+fi
