@@ -20,6 +20,7 @@
                    exec-path-from-shell
                    multiple-cursors
                    pacmacs
+                   paradox
                    rubocop
                    ruby-hash-syntax
                    solarized-theme
