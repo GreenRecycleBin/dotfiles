@@ -21,7 +21,6 @@ fi
 export HISTSIZE=""
 
 # User specific aliases and functions
-
 pathmunge () {
     case ":${PATH}:" in
         *:"$1":*)
@@ -34,6 +33,13 @@ pathmunge () {
             fi
     esac
 }
+
+# Homebrew
+pathmunge /usr/local/sbin
+pathmunge /usr/local/bin
+
+# Homebrew - coreutils
+pathmunge /usr/local/opt/coreutils/libexec/gnubin
 
 # Load configurations
 readonly XRESOURCES_PATH="$HOME/.Xresources"
@@ -68,12 +74,6 @@ readonly ANDROID_STUDIO_PATH="$HOME/Programming/Android/Android-Studio"
 if [ -d "$ANDROID_STUDIO_PATH" ]; then
     pathmunge "$ANDROID_STUDIO_PATH/bin"
 fi
-
-# Homebrew
-export PATH="/usr/local/bin:$PATH"
-
-# Homebrew - coreutils
-pathmunge /usr/local/opt/coreutils/libexec/gnubin
 
 # jenv
 readonly JENV_PATH="$HOME/.jenv"
