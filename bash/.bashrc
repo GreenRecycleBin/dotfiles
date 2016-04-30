@@ -75,6 +75,14 @@ export PATH="/usr/local/bin:$PATH"
 # Homebrew - coreutils
 pathmunge /usr/local/opt/coreutils/libexec/gnubin
 
+# jenv
+readonly JENV_PATH="$HOME/.jenv"
+
+if [ -d "$JENV_PATH" ]; then
+  . "$JENV_PATH/bin/jenv-init.sh"
+  . "$JENV_PATH/commands/completion.sh"
+fi
+
 pathmunge "$HOME/bin"
 
 # IBus
