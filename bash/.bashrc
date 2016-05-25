@@ -51,6 +51,8 @@ fi
 # Emacs environments
 readonly EMACS_ENVIRONMENT_ROOT="$HOME/.emacsenv.d"
 readonly PRELUDE="$EMACS_ENVIRONMENT_ROOT/prelude"
+readonly SPACEMACS="$EMACS_ENVIRONMENT_ROOT/spacemacs"
+readonly SPACEMACS_INIT_PATH="$SPACEMACS/private/local"
 
 # Aliases
 alias as='nohup studio.sh &> /dev/null &'
@@ -63,6 +65,11 @@ alias ped="EMACS_USER_DIRECTORY=$PRELUDE emacs --daemon"
 alias pek="emacsclient -s prelude -e '(kill-emacs)'"
 alias pesk="emacsclient -s prelude -e '(save-buffers-kill-emacs)'"
 alias pew='emacsclient -s prelude -nw'
+alias spec='emacsclient -s spacemacs -nc'
+alias sped="EMACS_USER_DIRECTORY=$SPACEMACS SPACEMACSDIR=$SPACEMACS_INIT_PATH emacs --daemon"
+alias spek="emacsclient -s spacemacs -e '(kill-emacs)'"
+alias spesk="emacsclient -s spacemacs -e '(save-buffers-kill-emacs)'"
+alias spew='emacsclient -s spacemacs -nw'
 
 # rbenv
 readonly RBENV_PATH="$HOME/.rbenv"
