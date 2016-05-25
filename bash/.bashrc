@@ -48,17 +48,21 @@ if [ -f "$XRESOURCES_PATH" ]; then
     xrdb "$XRESOURCES_PATH"
 fi
 
+# Emacs environments
+readonly EMACS_ENVIRONMENT_ROOT="$HOME/.emacsenv.d"
+readonly PRELUDE="$EMACS_ENVIRONMENT_ROOT/prelude"
+
 # Aliases
 alias as='nohup studio.sh &> /dev/null &'
-alias ec='emacsclient -nc'
-alias ed='emacs --daemon'
-alias ek="emacsclient -e '(kill-emacs)'"
-alias esk="emacsclient -e '(save-buffers-kill-emacs)'"
-alias ew='emacsclient -nw'
 alias ffd='nohup /opt/firefox-developer-edition/firefox -P dev-edition-default &> /dev/null &'
 alias ffp='nohup firefox -P personal &> /dev/null &'
 alias ffw='nohup firefox -P work &> /dev/null &'
 alias ls='ls -h --color=auto'
+alias pec='emacsclient -s prelude -nc'
+alias ped="EMACS_USER_DIRECTORY=$PRELUDE emacs --daemon"
+alias pek="emacsclient -s prelude -e '(kill-emacs)'"
+alias pesk="emacsclient -s prelude -e '(save-buffers-kill-emacs)'"
+alias pew='emacsclient -s prelude -nw'
 
 # rbenv
 readonly RBENV_PATH="$HOME/.rbenv"
