@@ -107,3 +107,6 @@ readonly NVM_DIR="/home/greenrecyclebin/.nvm"
 if [ -s "$NVM_DIR/nvm.sh" ]; then
     . "$NVM_DIR/nvm.sh"
 fi
+
+# Set the default terminal emulator for i3-sensible-terminal
+export TERMINAL=urxvt256c
