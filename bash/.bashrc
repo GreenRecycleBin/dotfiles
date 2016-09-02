@@ -44,7 +44,7 @@ pathmunge /usr/local/opt/coreutils/libexec/gnubin
 # Load configurations
 readonly XRESOURCES_PATH="$HOME/.Xresources"
 
-if [ -f "$XRESOURCES_PATH" ]; then
+if [ -f "$XRESOURCES_PATH" ] && which xrdb > /dev/null; then
     xrdb "$XRESOURCES_PATH"
 fi
 
