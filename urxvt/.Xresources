@@ -25,7 +25,7 @@ URxvt.matcher.button: 1
 URxvt.intensityStyles: false
 
 !! Emacs
-Emacs.font: -PfEd-Inconsolata-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1
+!! Emacs.font: -PfEd-Inconsolata-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1
 
 !! Keybindings
 URxvt.keysym.C-Up:     font-size:increase
