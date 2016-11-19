@@ -28,6 +28,7 @@ values."
      clojure
      emacs-lisp
      git
+     html
      javascript
      ;; markdown
      ;; org
