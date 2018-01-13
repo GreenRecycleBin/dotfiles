@@ -83,7 +83,7 @@ alias spedw='emacsclient -s spacemacs-dev -nw'
 readonly RBENV_PATH="$HOME/.rbenv"
 
 if [ -d "$RBENV_PATH" ]; then
-    pathmunge "$RBENV_PATH"
+    pathmunge "$RBENV_PATH/bin"
     eval "$(rbenv init -)"
 fi
 
