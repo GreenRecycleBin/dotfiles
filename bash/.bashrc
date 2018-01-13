@@ -56,7 +56,9 @@ readonly SPACEMACS_INIT_PATH="$SPACEMACS/private/local"
 
 # Aliases
 alias as='nohup studio.sh &> /dev/null &'
-alias ffd='nohup /opt/firefox-developer-edition/firefox -P dev-edition-default &> /dev/null &'
+alias ffdd='nohup /opt/firefox-developer-edition/firefox -P dev-edition-default &> /dev/null &'
+alias ffdp='nohup /opt/firefox-developer-edition/firefox -P personal &> /dev/null &'
+alias ffdw='nohup /opt/firefox-developer-edition/firefox -P work &> /dev/null &'
 alias ffp='nohup firefox -P personal &> /dev/null &'
 alias ffw='nohup firefox -P work &> /dev/null &'
 alias ls='ls -h --color=auto'
