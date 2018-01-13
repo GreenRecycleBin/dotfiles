@@ -52,6 +52,7 @@ fi
 readonly EMACS_ENVIRONMENT_ROOT="$HOME/.emacsenv.d"
 readonly PRELUDE="$EMACS_ENVIRONMENT_ROOT/prelude"
 readonly SPACEMACS="$EMACS_ENVIRONMENT_ROOT/spacemacs"
+readonly SPACEMACS_DEV="$HOME/Programming/Emacs/spacemacs-dev"
 readonly SPACEMACS_INIT_PATH="$SPACEMACS/private/local"
 
 # Aliases
@@ -72,6 +73,11 @@ alias sped="EMACS_USER_DIRECTORY=$SPACEMACS SPACEMACSDIR=$SPACEMACS_INIT_PATH em
 alias spek="emacsclient -s spacemacs -e '(kill-emacs)'"
 alias spesk="emacsclient -s spacemacs -e '(save-buffers-kill-emacs)'"
 alias spew='emacsclient -s spacemacs -nw'
+alias spedc='emacsclient -s spacemacs-dev -nc'
+alias spedd="EMACS_USER_DIRECTORY=$SPACEMACS_DEV SPACEMACSDIR=$SPACEMACS_INIT_PATH emacs --daemon"
+alias spedk="emacsclient -s spacemacs-dev -e '(kill-emacs)'"
+alias spedsk="emacsclient -s spacemacs-dev -e '(save-buffers-kill-emacs)'"
+alias spedw='emacsclient -s spacemacs-dev -nw'
 
 # rbenv
 readonly RBENV_PATH="$HOME/.rbenv"
