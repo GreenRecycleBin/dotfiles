@@ -118,3 +118,26 @@ fi
 
 # Set the default terminal emulator for i3-sensible-terminal
 export TERMINAL=urxvt256c-ml
+
+# Franz
+readonly FRANZ_PATH="$HOME/bin/Franz"
+
+if [ -d "$FRANZ_PATH" ]; then
+    pathmunge "$FRANZ_PATH"
+fi
+
+# Popcorn-Time
+readonly POPCORN_TIME_PATH="$HOME/bin/Popcorn-Time"
+
+if [ -d "$POPCORN_TIME_PATH" ]; then
+    pathmunge "$POPCORN_TIME_PATH"
+fi
+
+pathmunge "$HOME/.cargo/bin"
+
+# Shopify AdBlocker
+readonly SHOPIFY_ADBLOCKER_PATH="$HOME/Programming/spotify-blacklist-mute"
+
+if [ -d "$SHOPIFY_ADBLOCKER_PATH" ]; then
+    pathmunge "$SHOPIFY_ADBLOCKER_PATH"
+fi
